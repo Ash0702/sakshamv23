@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap">
+    <style>
+        *{
+            font-family: 'Nova Square', sans-serif;
+        }
+        #body{
+            background: violet;
+        }
+        #Clickme{
+            --box-shadow : purple;
+            width: 150px;
+            height: 50px;
+            border: 2px solid #7B0323;
+            border-radius: 8px;
+            box-shadow: 3px 2px 0px 0px #7B0323;
+            transition-property:border-radius, width, height, box-shadow;
+            transition-duration: 1s;
+        }
+        #Clickme:hover{
+
+            cursor: pointer;
+            width: 155px;
+            height: 50px;
+            box-shadow: 4px 3px 5px 0px #7B0323;
+            border-radius: 10px;
+        }
+        #button{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body id = "body">
+    <div id="button">
+        <input type="button" onclick="func1()" id="Clickme" value="Click Me">
+    </div>
+
+    <script>
+        var num = 0;
+        //var body = document.getElementById('body');
+        function func1() {
+            console.log(num);
+            num = num + 1;
+            if(num%7 == 0){
+                document.body.style.background = 'violet';
+            }
+            if(num%7 == 1){
+                document.body.style.background = "indigo";
+            }
+            if(num%7 == 2){
+                document.body.style.background = "blue";
+            }if(num%7 == 3){
+                document.body.style.background = "green";
+            }if(num%7 == 4){
+                document.body.style.background = "yellow";
+            }if(num%7 == 5){
+                document.body.style.background = "orange";
+            }if(num%7 == 6){
+                document.body.style.background = "red";
+            }
+        }
+    </script>
+</body>
+</html>
