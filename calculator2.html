@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/calculator2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap">
+</head>
+<body>
+    <div id="Outercontainer">
+        <input type="text" id="Finalans" value="" placeholder="Enter your Weight in Kg">
+        <!-- <input type="button" value="1" id="keypad1" class="numberskeypads"> -->
+        <div id="Container1">
+            
+            <div onclick="writeonfinalans('7')" class="smallcontainers1" id="keypad7">
+                <h1>7</h1>
+                <p>Seven</p>
+            </div>
+            <div onclick="writeonfinalans('8')" class="smallcontainers1" id="keypad8">
+                <h1>8</h1>
+                <p>Eight</p>
+            </div>
+            <div onclick="writeonfinalans('9')" class="smallcontainers1" id="keypad9">
+                <h1>9</h1>
+                <p>Nine</p>
+            </div>
+            <div onclick="writeonfinalans('4')" class="smallcontainers1" id="keypad4">
+                <h1>4</h1>
+                <p>Four</p>
+            </div>
+            <div onclick="writeonfinalans('5')" class="smallcontainers1" id="keypad5">
+                <h1>5</h1>
+                <p>Five</p>
+            </div>
+            <div onclick="writeonfinalans('6')" class="smallcontainers1" id="keypad6">
+                <h1>6</h1>
+                <p>Six</p>
+            </div>
+            <div onclick="writeonfinalans('1')" class="smallcontainers1" id="keypad1">
+                <h1>1</h1>
+                <p>One</p>
+            </div>
+            <div onclick="writeonfinalans('2')" class="smallcontainers1" id="keypad2">
+                <h1>2</h1>
+                <p>Two</p>
+            </div>
+            <div onclick="writeonfinalans('3')" class="smallcontainers1" id="keypad3">
+                <h1>3</h1>
+                <p>Three</p>
+            </div>
+            <div onclick="clearfinalans()" class="smallcontainers1" id="keypadclear">
+                <span>Clear</span>
+            </div>
+            <div onclick="writeonfinalans('0')" class="smallcontainers1" id="keypad0">
+                <h1>0</h1>
+                <p>Zero</p>
+            </div>
+            <div onclick="writeonfinalans('.')" class="smallcontainers1" id="keypadsdecimal">
+                <h1>.</h1>
+                <p>Point</p>
+            </div>
+        </div>
+        
+        <div id="Container2">
+            <div onclick="F4()" class="smallcontainers2" id="Keypadenter">
+                <span>Enter</span>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        var str1;
+        var str2;
+        var finale;
+        var whichone = 1;
+        var Num1 ; 
+        var Num2 ;
+        var operand = "1";
+        var str;
+        str ="";
+
+        function F4(params) {
+            if(whichone == 1){
+                str1 = Finalans.value;
+                Finalans.value = "";
+                Finalans.placeholder = "Enter your height in metres";
+                whichone = 2;
+                return;
+            }
+            if(whichone == 2){
+                str2 = Finalans.value;
+                finale = str1 + "/" + str2;
+                finale = F1(finale, '/');
+                finale = finale + "/" + str2;
+                finale = F1(finale, '/');
+                Finalans.value = "Your BMI is : " +finale;
+                whichone = 1;
+                str1 = "";
+                str2 = "";
+                return; 
+            }
+        }
+
+        function writeonfinalans(char) {
+            Finalans.value = Finalans.value + char;
+        }
+        
+        function clearfinalans(){
+            Finalans.value = "";
+            str = "";
+            Num1 = 0;
+            Num2 = 0;
+        }
+
+        function calculateans(){
+
+            str = Finalans.value;
+            for (let i = 0; i < str.length; i++) {
+                let roughstr;
+                if((str[i] == "+") || (str[i]=="-") || (str[i]=="^") || (str[i]=="*") || (str[i]=="/")){
+                    operand = str[i];
+                    Num1 = Number(str.slice(0, i));
+                    Num2 = Number(str.slice(i+1, (str.length) + 1));
+                    console.log(Num1 + " " + Num2);
+                    break;
+                }
+                
+            }
+            if(operand == "1"){
+                Finalans.value = "I cant do That, Im sorry";
+                return;
+            }
+
+            if(operand == "+"){
+                Finalans.value = Num1 + Num2;
+            }
+            if(operand == "-"){
+                Finalans.value = Num1 - Num2;
+            }
+            if(operand == "*"){
+                Finalans.value = Num1 * Num2;
+            }
+            if(operand == "/"){
+                Finalans.value = Num1 / Num2;
+            }
+            if(operand == "^"){
+                Finalans.value = Math.pow(Num1, Num2);
+            }
+            operand = "1"
+        }
+
+        //Give 2 numbers and operator and it gives number
+        function F2(Num1, Num2, operand){
+            if(operand == "+"){
+                return Num1 + Num2;
+            }
+            if(operand == "-"){
+                return Num1 - Num2;
+            }
+            if(operand == "*"){
+                return Num1 * Num2;
+            }
+            if(operand == "/"){
+                return Num1 / Num2;
+            }
+        }
+
+        //Give a string and the operand inside it, it gives the number
+        function F1(Str, operand) {
+            for(let i =0; ; i++){
+                if(Str[i] == operand){
+                    let Num1 = Number(Str.slice(0, i));
+                    let Num2 = Number(Str.slice(i+1, Str.length));
+                    return (F2(Num1, Num2, operand));
+                }
+            }
+        }
+
+        function F3(){
+            str = Finalans.value
+            let i, j, k, x;
+            i = -1;  j = -1; k= -1;
+            for( x = 0; x <= str.length ; x++){
+                if(str[x] == "+" || str[x] == "-" || str[x] == "*" || str[x] == "/" || x == str.length){
+                    i = j;
+                    j = k;
+                    k = x;
+                }
+                if(str[j] == "/"){
+                    str = str.replace(str.slice(i+1, k), F1(str.slice(i+1, k), "/"));
+                    j = i;
+                    k = i;
+                    x = i;
+                }
+            }
+            i = -1;  j = -1; k= -1;
+            for( x = 0; x <= str.length ; x++){
+                if(str[x] == "+" || str[x] == "-" || str[x] == "*" || str[x] == "/" || x == str.length){
+                    i = j;
+                    j = k;
+                    k = x;
+                }
+                if(str[j] == "*"){
+                    str = str.replace(str.slice(i+1, k), F1(str.slice(i+1, k), "*"));
+                    j = i;
+                    k = i;
+                    x = i;
+                }
+            }
+            i = -1;  j = -1; k= -1;
+            for( x = 0; x <= str.length ; x++){
+                if(str[x] == "+" || str[x] == "-" || str[x] == "*" || str[x] == "/" || x == str.length){
+                    i = j;
+                    j = k;
+                    k = x;
+                }
+                if(str[j] == "+"){
+                    str = str.replace(str.slice(i+1, k), F1(str.slice(i+1, k), "+"));
+                    j = i;
+                    k = i;
+                    x = i;
+                }
+            }
+            i = -1;  j = -1; k= -1;
+            for( x = 0; x <= str.length ; x++){
+                if(str[x] == "+" || str[x] == "-" || str[x] == "*" || str[x] == "/" || x == str.length){
+                    i = j;
+                    j = k;
+                    k = x;
+                }
+                if(str[j] == "-"){
+                    str = str.replace(str.slice(i+1, k), F1(str.slice(i+1, k), "-"));
+                    j = i;
+                    k = i;
+                    x = i;
+                }
+            }
+            Finalans.value = str;
+        }
+
+
+    </script>
+</body>
+</html>

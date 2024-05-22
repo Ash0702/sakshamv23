@@ -1,0 +1,193 @@
+* {
+    font-family: 'Nova Square', sans-serif;
+    font-size: 20px;
+}
+
+
+
+#Hamburger{
+    display: none;
+    order: 2;
+    height: fit-content;
+}
+
+#logo img {
+    width: 69%;
+    margin-top: -9px;
+    margin-left: 12px;
+}
+
+#logo p {
+    font-size: 17px;
+    margin-top: -21px;
+    margin-left: 30px;
+
+}
+
+#logo {
+    float: left;
+    width: 16%;
+    margin-top: -2%;
+}
+
+#navbar {
+    text-align: center;
+    margin-top: 2%;
+    overflow: auto;
+    width: 63%;
+    transition: text-color;
+}
+
+#navbar ul {
+    text-decoration: none;
+}
+
+#navbar ul li {
+    list-style-type: none;
+    text-decoration: none;
+    float: left;
+    margin-left: 12%;
+}
+/*
+
+
+
+
+CHange to alice blue here
+*/
+#navbar ul li a {
+    text-decoration: none;
+    color: black;
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+#navbar ul li a:hover {
+    color: blueviolet;
+}
+
+#buttons {
+    float: right;
+    margin-right: 2%;
+    margin-top: -29px;
+}
+
+.topbutton{
+        margin: 4.5rem 1rem;
+        padding: 0.7rem 0.5rem;
+        border-radius: 1rem;
+        color: aliceblue;
+        background-color: black;
+        transition-property: color, border-radius;
+        transition-duration: 1s;
+}
+.topbutton:hover {
+    color: blueviolet;
+    border-radius: 0px;
+}
+
+#personaldetails {
+    border: 4px black solid;
+    margin-top: 10%;
+    width: 50%;
+    margin-left: 3%;
+    border-radius: 50px;
+}
+
+.detailinput {
+    margin: auto;
+    height: 38px;
+    width: 55%;
+    margin-top: 1%;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+#submitbutton {
+    margin-bottom: 4%;
+    width: 35%;
+    margin-left: 33%;
+    margin-top: 4%;
+    transition-property: border-radius, color;
+    transition-duration: 1s;
+}
+
+#submitbutton:hover {
+    border-radius: 0px;
+    background-color: bisque;
+}
+
+@keyframes Submitbutton {
+    0%{
+        border-radius: 12px;
+
+    }
+    100%{
+        border-radius: 0px;
+        background-color: bisque;
+    }
+}
+
+
+@keyframes colorchange {
+    0%{
+        color: aliceblue;
+    }
+    100%{
+        color: blueviolet;
+    }
+}
+
+#inputtext {
+    padding-left: 20%;
+    font-size: 30px
+}
+
+@media screen and (max-width : 1224px) {
+    #navbar a {
+        margin: 0rem 1rem;
+    }
+}
+
+@media screen and (max-width : 988px) {
+    #navbar ul li a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width : 879px) {
+    .topbutton {
+        margin: 4.5rem 0.2rem;
+        font-size: 1rem;
+        padding: 0.7rem 0.2rem;
+    }
+}
+
+@media screen and (max-width : 795px) {
+    #logo img{
+        width: 11rem;
+        margin-top: -2rem;
+        margin-left: -3rem;
+    }
+    #logo p{
+        font-size: 1.5rem;
+    margin-left: 0.5rem;
+    margin-top: -2rem;
+    }
+}
+@media screen and (max-width : 697px) {
+    #navbar{
+        display: none;
+    }
+    #Hamburger{
+        display: block;
+    }
+    
+}
+@media screen and (max-width:401px) {
+    .topbutton{
+        font-size: 0.7rem;
+    }
+}

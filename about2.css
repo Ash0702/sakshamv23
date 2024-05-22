@@ -1,0 +1,333 @@
+html {
+    font-size: 10px;
+}
+
+* {
+    font-family: 'Nova Square', sans-serif;
+}
+
+/*   body{
+    background-image: url('');
+    background-size: cover;
+    background-repeat: no-repeat;
+}*/
+.smallcontainer {
+    position: relative;
+    border: 2px solid red;
+    width: 250px;
+    height: 470px;
+    display: inline-block;
+    margin: 3px;
+    box-shadow: 2.5px 3.5px 4px rgb(205, 93, 93);
+    margin: 50px 0px;
+    background-color: bisque;
+    transition-property: box-shadow, height, width;
+    transition-duration: 2s;
+}
+
+#box4 {
+    position: relative;
+    right: 38%;
+    animation-name: intialga4;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#box3 {
+    position: relative;
+    right: 13%;
+    animation-name: intialga3;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+#box2 {
+    position: relative;
+    left: 12%;
+    animation-name: intialga2;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#box1 {
+    position: relative;
+    left: 37%;
+    animation-name: intialga1;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#Navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+#Logo img {
+    width: 22rem;
+    margin-left: -4rem;
+    margin-top: -4rem;
+}
+
+#Logo p {
+    animation-name: makeitappear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    font-size: 2.2rem;
+    margin-left: 3.5rem;
+    margin-top: -4rem;
+}
+
+#navbarcontents {
+    animation-name: makeitappear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    padding-top: 5rem;
+}
+
+#navbarcontents a {
+    margin: 0rem 4rem;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.topbutton {
+    margin: 4.5rem 1rem;
+    padding: 0.7rem 0.5rem;
+    border-radius: 1rem;
+    color: aliceblue;
+    background-color: black;
+    transition-property: color, border-radius;
+    transition-duration: 1s;
+}
+
+#Hamburger{
+    display: none;
+    order: 2;
+    height: fit-content;
+}
+#Panel{
+    display: none;
+    position: absolute;
+    width: 90vw;
+    height: 5rem;
+    top: 12rem;
+    right: 5vw;
+    border: 2px solid red;
+    background-color: aqua;
+}
+#Panel a{
+    text-decoration: none;
+}
+#Hamburger img{
+    width: 5rem;
+}
+#Hamburger:hover #Panel{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+@media screen and (max-width : 1224px) {
+    #navbarcontents a {
+        margin: 0rem 1rem;
+    }
+}
+
+@media screen and (max-width : 988px) {
+    #navbarcontents a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width : 879px) {
+    .topbutton {
+        margin: 4.5rem 0.2rem;
+        font-size: 1rem;
+        padding: 0.7rem 0.2rem;
+    }
+}
+
+@media screen and (max-width : 795px) {
+    #Logo img{
+        width: 11rem;
+        margin-top: -2rem;
+        margin-left: -3rem;
+    }
+    #Logo p{
+        font-size: 1.5rem;
+    margin-left: 0.5rem;
+    margin-top: -2rem;
+    }
+}
+@media screen and (max-width : 697px) {
+    #navbarcontents{
+        display: none;
+    }
+    #Hamburger{
+        display: block;
+    }
+    .bigcontainer{
+        margin-top: -3rem;
+    }
+}
+@media screen and (max-width:401px) {
+    .topbutton{
+        font-size: 0.7rem;
+    }
+}
+
+.topbutton:hover {
+    color: blueviolet;
+    border-radius: 0rem;
+}
+
+.heading {
+    font-size: 2rem;
+}
+
+.para {
+    font-size: 1.4rem;
+}
+
+.bigcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+}
+
+.smallcontainer p {
+    animation-name: makeitappear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    padding: 0px 10px;
+}
+
+.smallcontainer h2 {
+    animation-name: makeitappear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    padding: 0px 70px;
+}
+
+img {
+    animation-name: makeitappear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    width: 185px;
+    padding: 20px 27px;
+    padding-bottom: 0px;
+}
+
+
+#box1:hover {
+    box-shadow: 10px 14px 8px rgb(205, 93, 93);
+    width: 260px;
+    height: 480px;
+}
+
+#box2:hover {
+    box-shadow: 10px 14px 8px rgb(205, 93, 93);
+    width: 260px;
+    height: 480px;
+}
+
+#box3:hover {
+    box-shadow: 10px 14px 8px rgb(205, 93, 93);
+    width: 260px;
+    height: 480px;
+}
+
+#box4:hover {
+    box-shadow: 10px 14px 8px rgb(205, 93, 93);
+    width: 260px;
+    height: 480px;
+}
+
+.navbarcontents {
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes makeitup {
+    0% {
+        box-shadow: 2.5px 3.5px 4px rgb(205, 93, 93);
+    }
+
+    100% {
+        box-shadow: 10px 14px 8px rgb(205, 93, 93);
+    }
+}
+
+@keyframes makeitappear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes intialga4 {
+    0% {
+        right: 38%;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+@keyframes intialga3 {
+    0% {
+        right: 13%;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+@keyframes intialga2 {
+    0% {
+        left: 12%;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes intialga1 {
+    0% {
+        left: 37%;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes borderradius {
+    0% {
+        color: aliceblue;
+        border-radius: 1rem;
+    }
+
+    100% {
+        color: blueviolet;
+        border-radius: 0rem;
+    }
+}

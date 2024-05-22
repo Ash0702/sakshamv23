@@ -1,0 +1,12 @@
+navbarcontents = Navbar
+Hamburger = Hamburger
+Buttons = buttons
+Logo = logo
+Navbar = Naavbar
+
+
+
+background-image: url('gymgal.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    

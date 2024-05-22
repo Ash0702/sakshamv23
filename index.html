@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="about2.css">
+    <style>
+        html {
+    font-size: 10px;
+}
+
+* {
+    font-family: 'Nova Square', sans-serif;
+}
+
+/*   body{
+    background-image: url('');
+    background-size: cover;
+    background-repeat: no-repeat;
+}*/
+.smallcontainer {
+    position: relative;
+    border: 2px solid red;
+    width: 250px;
+    height: 470px;
+    display: inline-block;
+    margin: 3px;
+    box-shadow: 2.5px 3.5px 4px rgb(205, 93, 93);
+    margin: 50px 0px;
+    background-color: bisque;
+    transition-property: box-shadow, height, width;
+    transition-duration: 2s;
+}
+
+#box4 {
+    position: relative;
+    right: 38%;
+    animation-name: intialga4;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#box3 {
+    position: relative;
+    right: 13%;
+    animation-name: intialga3;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+#box2 {
+    position: relative;
+    left: 12%;
+    animation-name: intialga2;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#box1 {
+    position: relative;
+    left: 37%;
+    animation-name: intialga1;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#Navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+#Logo img {
+    width: 22rem;
+    margin-left: -4rem;
+    margin-top: -4rem;
+}
+
+#Logo p {
+    animation-name: makeitappear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    font-size: 2.2rem;
+    margin-left: 3.5rem;
+    margin-top: -4rem;
+}
+
+#navbarcontents {
+    animation-name: makeitappear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    padding-top: 5rem;
+}
+
+#navbarcontents a {
+    margin: 0rem 4rem;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.topbutton {
+    margin: 4.5rem 1rem;
+    padding: 0.7rem 0.5rem;
+    border-radius: 1rem;
+    color: aliceblue;
+    background-color: black;
+    transition-property: color, border-radius;
+    transition-duration: 1s;
+}
+
+#Hamburger{
+    display: none;
+    order: 2;
+    height: fit-content;
+}
+#Panel{
+    display: none;
+    position: absolute;
+    width: 90vw;
+    height: 5rem;
+    top: 12rem;
+    right: 5vw;
+    border: 2px solid red;
+    background-color: aqua;
+}
+#Panel a{
+    text-decoration: none;
+}
+#Hamburger img{
+    width: 5rem;
+}
+#Hamburger:hover #Panel{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+@media screen and (max-width : 1224px) {
+    #navbarcontents a {
+        margin: 0rem 1rem;
+    }
+}
+
+@media screen and (max-width : 988px) {
+    #navbarcontents a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width : 879px) {
+    .topbutton {
+        margin: 4.5rem 0.2rem;
+        font-size: 1rem;
+        padding: 0.7rem 0.2rem;
+    }
+}
+
+@media screen and (max-width : 795px) {
+    #Logo img{
+        width: 11rem;
+        margin-top: -2rem;
+        margin-left: -3rem;
+    }
+    #Logo p{
+        font-size: 1.5rem;
+    margin-left: 0.5rem;
+    margin-top: -2rem;
+    }
+}
+@media screen and (max-width : 697px) {
+    #navbarcontents{
+        display: none;
+    }
+    #Hamburger{
+        display: block;
+    }
+    .bigcontainer{
+        margin-top: -3rem;
+    }
+}
+@media screen and (max-width:401px) {
+    .topbutton{
+        font-size: 0.7rem;
+    }
+}
+
+.topbutton:hover {
+    color: blueviolet;
+    border-radius: 0rem;
+}
+
+.heading {
+    font-size: 2rem;
+}
+
+.para {
+    font-size: 1.4rem;
+}
+
+.bigcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+}
+
+.smallcontainer p {
+    animation-name: makeitappear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    padding: 0px 10px;
+}
+
+.smallcontainer h2 {
+    animation-name: makeitappear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    padding: 0px 70px;
+}
+
+img {
+    animation-name: makeitappear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    width: 185px;
+    padding: 20px 27px;
+    padding-bottom: 0px;
+}
+
+
+#box1:hover {
+    box-shadow: 10px 14px 8px rgb(205, 93, 93);
+    width: 260px;
+    height: 480px;
+}
+
+#box2:hover {
+    box-shadow: 10px 14px 8px rgb(205, 93, 93);
+    width: 260px;
+    height: 480px;
+}
+
+#box3:hover {
+    box-shadow: 10px 14px 8px rgb(205, 93, 93);
+    width: 260px;
+    height: 480px;
+}
+
+#box4:hover {
+    box-shadow: 10px 14px 8px rgb(205, 93, 93);
+    width: 260px;
+    height: 480px;
+}
+
+.navbarcontents {
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes makeitup {
+    0% {
+        box-shadow: 2.5px 3.5px 4px rgb(205, 93, 93);
+    }
+
+    100% {
+        box-shadow: 10px 14px 8px rgb(205, 93, 93);
+    }
+}
+
+@keyframes makeitappear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes intialga4 {
+    0% {
+        right: 38%;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+@keyframes intialga3 {
+    0% {
+        right: 13%;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
+
+@keyframes intialga2 {
+    0% {
+        left: 12%;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes intialga1 {
+    0% {
+        left: 37%;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes borderradius {
+    0% {
+        color: aliceblue;
+        border-radius: 1rem;
+    }
+
+    100% {
+        color: blueviolet;
+        border-radius: 0rem;
+    }
+}
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap">
+</head>
+
+<body>
+    <div id = "Navbar">
+        <div id = "Logo">
+            <img src="/logo.webp" alt="Logo">
+            <p>Kanpur Fitness</p>
+        </div>
+        
+        <div id="Hamburger">
+            <img src="/hamburger.png" alt="Hamburger">
+            <div id="Panel">
+                <a href="/home2.html">Home</a>
+                <a href="/index.html">About</a>
+                <a href="#">Contact us</a>
+                <a href="#">Fitnesscalculator</a>
+            </div>
+        </div>
+
+        <div id="navbarcontents">
+            <a href="/home2.html" target="_blank">Home</a>
+            <a href="/about2.html" target="_blank">About us</a>
+            <a href="#" target="_blank">Contact Us</a>
+            <a id="Fitnesscalculator" href="/calculator2.html" target="_blank">Fitness Calculator</a>
+        </div>
+
+        <div id = "Buttons">
+            <input type="button" class="topbutton" value="Call us now">
+            <input type="button" class="topbutton" value="Email us now">
+        </div>
+    </div>
+
+    <div class="bigcontainer">
+        <div class="smallcontainer" id="box1">
+            <img src="/dumbells.jpg" alt="Insert dumbells pic here" id="dumbellpig">
+            <h2 class="heading">Weights1</h2>
+            <p class="para">Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, cum commodi error corporis itaque velit, consectetur deserunt eveniet blanditiis, incidunt vero distinctio quaerat tenetur sint amet similique et perspiciatis assumenda molestiae quo recusandae dolores. ipsum dolor sit amet consectetur adipisicing elit. Dolores ab iure placeat aperiam sint eos amet
+                suscipit dolore nostrum accusamus!</p>
+        </div>
+        <div class="smallcontainer" id="box2">
+            <img src="/benchpress.jpg" alt="Benchpress">
+            <h2 class="heading">Machines2</h2>
+            <p class="para">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, aut quia nam quis et quibusdam nesciunt accusamus modi! Non labore adipisci facere tempora, id amet animi dolorum iusto neque accusamus. Id vitae molestias molestiae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam illo pariatur nisi repudiandae. Et est
+                fuga asperiores sit aut!</p>
+        </div>
+        <div class="smallcontainer" id="box3">
+            <img src="/traedmilk.jpg" alt="Insert treadmill here">
+            <h2 class="heading">Cardio3</h2>
+            <p class="para">Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus fugiat eveniet explicabo doloremque, autem at totam a veritatis quidem enim tempore consequuntur possimus! Vel eaque placeat atque at numquam sapiente ipsum maiores qui voluptates. ipsum dolor sit amet consectetur adipisicing elit. Officia eligendi ea odio suscipit eveniet, harum
+                sunt modi omnis alias exercitationem quidem.</p>
+        </div>
+        <div class="smallcontainer" id="box4">
+            <img src="/zumba.jpg" alt="Zumba">
+            <h2 class="heading">Zumba4</h2>
+            <p class="para">Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Id non labore explicabo illum tenetur? Adipisci explicabo sequi eaque tempore cum molestiae iste architecto ipsam aliquid labore, officia delectus placeat culpa fugit laborum nostrum fugiat. ipsum dolor sit amet consectetur adipisicing elit.fuck Sint minima iure, veritatis in odit architecto
+            itaque, fugiat eius, dignissimos doloribus</p>
+        </div>
+    </div>
+    <footer><a href="/veggieform.html">Click here to go bakc home</a></footer>
+</body>
+
+</html>
